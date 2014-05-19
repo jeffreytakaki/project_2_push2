@@ -1,0 +1,35 @@
+
+
+<div class = "upperdiv">
+	<div class="jumbotron">
+	  <h1>We're tying the knot...</h1>
+	  <br>
+	  <br>
+	  <p><button id="rsvpbutton" type="button"><%= link_to "RSVP", new_user_path %></button></p>
+	</div>
+</div>
+<div class = "bottomdiv">
+	<div class = "messageboard">
+		<div class = "mbtitle">
+			<h2>Wedding Board</h2>
+		</div>
+		<div class = "mbbody">
+			<% User.each do |x| %>
+				<div class = "mbentry">
+				<% if x.message %>
+				<%= x.name + " - " %>
+				<%= x.message %><br>
+				<% end %>
+				</div><br>
+			<% end %>
+		</div>
+	</div>
+</div>
+	
+
+
+
+
+
+
+

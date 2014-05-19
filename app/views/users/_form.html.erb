@@ -1,0 +1,8 @@
+<%= form_for @user do |u| %>
+	Name: <%= u.text_field :name %><br>
+	Email: <%= u.text_field :email %><br>
+	Phone Number: <%= u.text_field :phoneNum %><br>
+	Message: <%= u.text_field :message %><br>
+	Attending? <%= u.check_box :attendance %><br><br>
+	<%= u.submit %>
+<% end %>
